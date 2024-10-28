@@ -1,0 +1,61 @@
+/* 
+320, 640px, 1280px (Trae Best Practice)
+640px, 768px, 1024px, 1280px, 1536px (Tailwind Default - sm, md, lg, xl, 2xl)
+*/
+* {
+  utline: 1px solid black;
+}
+:root {
+  --primary-color: #3498db;
+}
+body {
+  font-family: "Trebuchet MS";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: beige;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.myComponent {
+  background-color: lightblue;
+  padding: 20px;
+
+  & .header {
+    font-size: 24px;
+    color: navy;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+      color: red;
+    }
+  }
+
+  & .content {
+    font-size: 16px;
+    color: darkgreen;
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      color: orange;
+    }
+  }
+
+  & .footer {
+    text-align: center;
+    color: darkslategray;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+      color: purple;
+    }
+  }
+}
