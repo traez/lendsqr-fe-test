@@ -4,38 +4,184 @@
   grid-template-columns: auto;
   min-height: 100vh;
   width: 100%;
+  font-family: var(--font-avenir-next-cyr);
 
-  .login-divs {
+  .login-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .login-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: #fff;
-
-    &.login-images {
-      background-color: #3498db;
-    }
-
-    &.login-form {
-      background-color: #e74c3c;
-    }
   }
 
-  @media (min-width: 641px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+
+    .login-images {
+      flex-direction: column;
+      align-items: start;
+      padding-left: 67px;
+    }
+  }
+}
+.logo-lendsqr-container {
+  width: 174px;
+  height: 36px;
+  position: relative;
+
+  .logo-lendsqr {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.logo-entry-container {
+  width: 126px;
+  height: 70px;
+  position: relative;
+
+  .logo-entry {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media (min-width: 480px) {
+    width: 180px;
+    height: 101px;
+  }
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 169px;
+  }
+  @media (min-width: 1024px) {
+    width: 450px;
+    height: 254px;
+  }
+  @media (min-width: 1280px) {
+    width: 600px;
+    height: 338px;
   }
 }
 
-// Global color and font variables
-$main-color: #dbe1e4;
-$main-font: Arial, sans-serif;
+.login-form-container {
+  width: 322px; /* New normal width */
+  height: 330px; /* New normal height */
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 
-// Styling the main div element
-.main-container {
-  color: $main-color;
-  font-family: $main-font;
-  padding: 20px;
-  border: 3px solid rgb(12, 12, 12);
-  background-color: #fff;
+  @media (min-width: 1024px) {
+    width: 460px;
+    height: 350px;
+  }
+
+  .login-form-heading {
+    font-weight: 900;
+    text-shadow: 1px 1px 0 #213f7d, -1px -1px 0 #213f7d, 0 1px 0 #213f7d,
+      0 -1px 0 #213f7d;
+    font-size: 40px;
+    color: #213f7d;
+    letter-spacing: -0.04em;
+    margin-bottom: 15px;
+  }
+  .login-form-subheading {
+    font-size: 20px;
+    color: #545f7d;
+  }
+  .login-form-container-bottom {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 15px;
+
+    .login-form-email-input {
+      width: 312px;
+      height: 35px;
+      border-radius: 5px;
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      color: #545f7d;
+      padding-left: 10px;
+
+      @media (min-width: 1024px) {
+        width: 445px;
+        height: 50px;
+      }
+    }
+    .login-form-password-container {
+      width: 312px;
+      height: 35px;
+      border-radius: 5px;
+      position: relative;
+
+      @media (min-width: 1024px) {
+        width: 445px;
+        height: 50px;
+      }
+    }
+    .login-form-password-input {
+      width: 100%;
+      height: 100%;
+      color: #545f7d;
+      padding-left: 10px;
+      border: 1px solid rgba(84, 95, 125, 0.15);
+      border-radius: 5px;
+    }
+    .login-form-toggle-button {
+      width: 50px;
+      height: 13px;
+      color: #39cdcc;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .login-form-forgot-password {
+      width: 147px;
+      height: 17px;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      color: #39cdcc;
+      text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.1),
+        -0.5px -0.5px 0 rgba(0, 0, 0, 0.1), 0 0.5px 0 rgba(0, 0, 0, 0.1),
+        0 -0.5px 0 rgba(0, 0, 0, 0.1);
+    }
+    .login-form-submit-button {
+      width: 312px;
+      height: 35px;
+      color: white;
+      background: #39cdcc;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      cursor: pointer;
+
+      &:hover {
+        background: #31b6b0;
+      }
+
+      @media (min-width: 1024px) {
+        width: 445px;
+        height: 50px;
+      }
+    }
+  }
 }

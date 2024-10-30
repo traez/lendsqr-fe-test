@@ -1,19 +1,21 @@
+/* 
+320, 480px, 640px, 1280px (Trae Best Practice)
+640px, 768px, 1024px, 1280px, 1536px (Tailwind Default - sm, md, lg, xl, 2xl)
+*/
 * {
-  outline: 1px solid black;
+  utline: 1px solid black;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
   // font-family: var(--font-work-sans), var(--font-avenir-next-cyr);
-  font-family: var(--font-avenir-next-cyr), var(--font-work-sans);
 }
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  background-color: #90b8d3;
 }
 
 main {
