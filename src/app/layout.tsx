@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/scss/global.scss";
+import StateProvider from "@/lib/StateProvider";
 
 const workSans = localFont({
   src: "./fonts/WorkSans-Regular.woff",
@@ -24,12 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${workSans.variable} ${avenirNextCyr.variable} antialiased`}
-      >
-        <main>{children}</main>
-      </body>
-    </html>
+    <StateProvider>
+      <html lang="en">
+        <body
+          className={`${workSans.variable} ${avenirNextCyr.variable} antialiased`}
+        >
+          <main>{children}</main>
+        </body>
+      </html>
+    </StateProvider>
   );
 }

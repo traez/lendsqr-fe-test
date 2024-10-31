@@ -8,9 +8,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  // font-family: var(--font-work-sans), var(--font-avenir-next-cyr);
-}
 body {
   display: flex;
   flex-direction: column;
@@ -24,6 +21,4 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 }

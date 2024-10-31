@@ -1,16 +1,23 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const router = useRouter();
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible((prevState) => !prevState);
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/dashboard");
+  };
+
   return (
     <article className="login-form">
-      <form className="login-form-container">
+      <form className="login-form-container" onSubmit={handleSubmit}>
         <aside className="login-form-container-top">
           <h1 className="login-form-heading">Welcome!</h1>
           <p className="login-form-subheading">Enter details to login.</p>
