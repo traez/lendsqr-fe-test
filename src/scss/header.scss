@@ -43,14 +43,14 @@
       cursor: pointer;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .header-nav-menu {
         display: block;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        min-width: 550px;
+        min-width: 800px;
       }
 
       .header-icon-container {
@@ -95,6 +95,73 @@
       position: relative;
 
       & .icon-magnifying-glass {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+.header-nav-menu-aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 340px;
+  height: 50px;
+
+  & .header-nav-menu-aside-docs {
+    font-size: 16px;
+    font-weight: 400;
+    color: #213f7d;
+  }
+
+  & .header-nav-menu-aside-bell-container {
+    width: 26px;
+    height: 26px;
+    position: relative;
+
+    & .header-nav-menu-aside-bell {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  & .header-nav-menu-aside-adedeji-container {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    & .header-nav-menu-aside-adedeji {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  & .header-nav-menu-aside-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    & .header-nav-menu-aside-div-adedeji {
+      font-size: 16px;
+      font-weight: 500;
+      color: #213f7d;
+    }
+    & .header-nav-menu-aside-dd-container {
+      width: 20px;
+      height: 20px;
+      position: relative;
+
+      & .header-nav-menu-aside-dd {
         width: 100%;
         height: auto;
         position: absolute;

@@ -44,7 +44,7 @@ const Header = () => {
             >
               <div className="icon-magnifying-glass-container">
                 <Image
-                  src="/magnifying-glass.png"
+                  src="/icon-header-magnifying-glass.png"
                   alt="magnifying-glass"
                   fill
                   sizes="(min-width: 400px) 100vw"
@@ -53,7 +53,39 @@ const Header = () => {
               </div>
             </button>
           </form>
-          <aside>aside2</aside>
+          <aside className="header-nav-menu-aside">
+            <div className="header-nav-menu-aside-docs">Docs</div>
+            <div className="header-nav-menu-aside-bell-container">
+              <Image
+                src="/icon-header-bell.png"
+                alt="header-nav-menu-aside-bell"
+                fill
+                sizes="(min-width: 400px) 100vw"
+                className="header-nav-menu-aside-bell"
+              />
+            </div>
+            <div className="header-nav-menu-aside-adedeji-container">
+              <Image
+                src="/icon-header-adedeji.png"
+                alt="header-nav-menu-aside-adedeji"
+                fill
+                sizes="(min-width: 400px) 100vw"
+                className="header-nav-menu-aside-adedeji"
+              />
+            </div>
+            <span className="header-nav-menu-aside-span">
+              <div className="header-nav-menu-aside-div-adedeji">Adedeji</div>
+              <div className="header-nav-menu-aside-dd-container">
+                <Image
+                  src="/icon-header-dd.svg"
+                  alt="header-nav-menu-aside-dd"
+                  fill
+                  sizes="(min-width: 400px) 100vw"
+                  className="header-nav-menu-aside-dd"
+                />
+              </div>
+            </span>
+          </aside>
         </menu>
         <div onClick={toggleMenu} className="header-icon-container">
           {isMenuOpen ? (
