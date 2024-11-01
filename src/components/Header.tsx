@@ -1,20 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useContext } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
+import { StateContext } from "@/lib/StateProvider";
 
 const Header = () => {
   const router = useRouter();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { toggleModalState, isMenuOpen } = useContext(StateContext)!;
 
   const handleLogoClick = () => {
     router.push("/");
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
   };
 
   return (
@@ -87,7 +84,7 @@ const Header = () => {
             </span>
           </aside>
         </menu>
-        <div onClick={toggleMenu} className="header-icon-container">
+        <div onClick={toggleModalState} className="header-icon-container">
           {isMenuOpen ? (
             <TfiClose size="30px" />
           ) : (

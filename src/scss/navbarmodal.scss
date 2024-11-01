@@ -1,3 +1,382 @@
-.navbarmodal {
-    display: none; 
+.navbarmodal-overlay {
+  width: 100%;
+  height: 100vh;
+
+  .navbarmodal-content {
+    width: 90%;
+    height: auto;
+    margin: 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+
+    .navbarmodal-togglex {
+      cursor: pointer;
+      align-self: end;
+    }
+
+    form {
+      //70% of all old values
+      width: 280px;
+      height: 28px;
+      border: 1px solid #213f7d;
+      display: flex;
+      border-radius: 8px;
+
+      input {
+        width: 240px;
+        opacity: 0.7;
+        font-size: 14px;
+        font-weight: 400;
+        color: #545f7d;
+        padding-left: 10px;
+      }
+
+      button {
+        width: 39px;
+        background-color: #39cdcc;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: #25b2a5;
+        }
+
+        div {
+          width: 14px;
+          height: 14px;
+          position: relative;
+
+          & .icon-magnifying-glass {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .navbarmodal-aside {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      width: 238px;
+      height: 35px;
+
+      .navbarmodal-aside-docs {
+        font-size: 16px;
+        font-weight: 400;
+        color: #213f7d;
+      }
+
+      .navbarmodal-aside-bell-container {
+        width: 18px;
+        height: 18px;
+        position: relative;
+
+        .navbarmodal-aside-bell {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .navbarmodal-aside-adedeji-container {
+        width: 34px;
+        height: 34px;
+        position: relative;
+
+        .navbarmodal-aside-adedeji {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .navbarmodal-aside-span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .navbarmodal-aside-div-adedeji {
+          font-size: 16px;
+          font-weight: 500;
+          color: #213f7d;
+        }
+        .navbarmodal-aside-dd-container {
+          width: 14px;
+          height: 14px;
+          position: relative;
+
+          .navbarmodal-aside-dd {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .navbarmodal-switcho {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      &:hover {
+        border-left: 5px solid #39cdcc;
+        background-color: #e0f7f7;
+        cursor: pointer;
+      }
+
+      .navbarmodal-switcho-brief-container {
+        width: 16px;
+        height: 16px;
+        position: relative;
+
+        .navbarmodal-switcho-brief {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+
+      .navbarmodal-switcho-dd-container {
+        width: 16px;
+        height: 16px;
+        position: relative;
+
+        .navbarmodal-switcho-dd {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .navbarmodal-dashboardh {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      &:hover {
+        border-left: 5px solid #39cdcc;
+        background-color: #e0f7f7;
+        cursor: pointer;
+      }
+
+      .navbarmodal-dashboard-house-container {
+        width: 16px;
+        height: 16px;
+        position: relative;
+
+        .navbarmodal-dashboard-house {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+    }
+
+    .navbarmodal-customers {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 5px;
+          padding: 5px 0px;
+          width: 100%;
+
+          &:hover {
+            border-left: 5px solid #39cdcc;
+            background-color: #e0f7f7;
+            cursor: pointer;
+          }
+
+          .navbarmodal-customers-container {
+            width: 16px;
+            height: 16px;
+            position: relative;
+
+            .navbarmodal-customers-icon {
+              width: 100%;
+              height: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navbarmodal-businesses {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 5px;
+          padding: 5px 0px;
+          width: 100%;
+
+          &:hover {
+            border-left: 5px solid #39cdcc;
+            background-color: #e0f7f7;
+            cursor: pointer;
+          }
+
+          .navbarmodal-businesses-container {
+            width: 16px;
+            height: 16px;
+            position: relative;
+
+            .navbarmodal-businesses-icon {
+              width: 100%;
+              height: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navbarmodal-settings {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 5px;
+          padding: 5px 0px;
+          width: 100%;
+
+          &:hover {
+            border-left: 5px solid #39cdcc;
+            background-color: #e0f7f7;
+            cursor: pointer;
+          }
+
+          .navbarmodal-settings-container {
+            width: 16px;
+            height: 16px;
+            position: relative;
+
+            .navbarmodal-settings-icon {
+              width: 100%;
+              height: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
   }
+}

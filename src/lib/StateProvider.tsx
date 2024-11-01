@@ -6,9 +6,11 @@ export const StateContext = createContext<StateContextType | undefined>(
 );
 
 interface StateContextType {
-  isModalOneOpen: boolean;
-  setIsModalOneOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  toggleModalOne: () => void;
+  isModalNavbarOpen: boolean;
+  setIsModalNavbarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleModalState: () => void;
 }
 
 interface StateProviderProps {
@@ -16,18 +18,22 @@ interface StateProviderProps {
 }
 
 export default function StateProvider({ children }: StateProviderProps) {
-  const [isModalOneOpen, setIsModalOneOpen] = useState(true);
+  const [isModalNavbarOpen, setIsModalNavbarOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleModalOne = () => {
-    setIsModalOneOpen((prev) => !prev);
+  const toggleModalState = () => {
+    setIsModalNavbarOpen((prev) => !prev);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
     <StateContext.Provider
       value={{
-        isModalOneOpen,
-        setIsModalOneOpen,
-        toggleModalOne,
+        isModalNavbarOpen,
+        setIsModalNavbarOpen,
+        isMenuOpen,
+        setIsMenuOpen,
+        toggleModalState,
       }}
     >
       {children}

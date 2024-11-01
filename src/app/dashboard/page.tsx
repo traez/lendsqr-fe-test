@@ -1,15 +1,11 @@
-import Navbar from "@/components/Navbar";
-import NavbarModal from "@/components/NavbarModal";
-import Users from "@/components/Users";
+import Dashboard from "@/components/Dashboard";
 
-const DashboardPage = () => {
+const DashboardHome = () => {
   return (
     <>
-      <Navbar />
-      <Users />
-      <NavbarModal />
+      <Dashboard />
     </>
   );
 };
 
-export default DashboardPage;
+export default DashboardHome;
