@@ -1,34 +1,103 @@
+import Image from "next/image";
+import { arrayCustomers, arrayBusinesses, arraySettings } from "@/lib/data";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
-      Navbar
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <menu className="navbarmodal-switcho">
+        <div className="navbarmodal-switcho-brief-container">
+          <Image
+            src="/icon-switch-briefcase.svg"
+            alt="navbarmodal-switcho-brief"
+            fill
+            sizes="(min-width: 400px) 100vw"
+            className="navbarmodal-switcho-brief"
+          />
+        </div>
+        <span>Switch Organization</span>
+        <div className="navbarmodal-switcho-dd-container">
+          <Image
+            src="/icon-switch-v-dropdown.svg"
+            alt="navbarmodal-switcho-dd"
+            fill
+            sizes="(min-width: 400px) 100vw"
+            className="navbarmodal-switcho-dd"
+          />
+        </div>
+      </menu>
+
+      <menu className="navbarmodal-dashboardh">
+        <div className="navbarmodal-dashboard-house-container">
+          <Image
+            src="/icon-dashboard-house.svg"
+            alt="navbarmodal-dashboard-house"
+            fill
+            sizes="(min-width: 400px) 100vw"
+            className="navbarmodal-dashboard-house"
+          />
+        </div>
+        <span>Dashboard</span>
+      </menu>
+
+      <menu className="navbarmodal-customers">
+        <span>CUSTOMERS</span>
+        <ul>
+          {arrayCustomers.map(({ icon, customer }) => (
+            <li key={icon}>
+              <div className="navbarmodal-customers-container">
+                <Image
+                  src={`/${icon}`}
+                  alt={`navbarmodal-customers-icon-${customer.toLowerCase()}`}
+                  fill
+                  sizes="(min-width: 400px) 100vw"
+                  className="navbarmodal-customers-icon"
+                />
+              </div>
+              <b>{customer}</b>
+            </li>
+          ))}
+        </ul>
+      </menu>
+
+      <menu className="navbarmodal-businesses">
+        <span>BUSINESSES</span>
+        <ul>
+          {arrayBusinesses.map(({ icon, business }) => (
+            <li key={icon}>
+              <div className="navbarmodal-businesses-container">
+                <Image
+                  src={`/${icon}`}
+                  alt={`navbarmodal-businesses-icon-${business.toLowerCase()}`}
+                  fill
+                  sizes="(min-width: 400px) 100vw"
+                  className="navbarmodal-businesses-icon"
+                />
+              </div>
+              <b>{business}</b>
+            </li>
+          ))}
+        </ul>
+      </menu>
+
+      <menu className="navbarmodal-settings">
+        <span>SETTINGS</span>
+        <ul>
+          {arraySettings.map(({ icon, setting }) => (
+            <li key={icon}>
+              <div className="navbarmodal-settings-container">
+                <Image
+                  src={`/${icon}`}
+                  alt={`navbarmodal-settings-icon-${setting.toLowerCase()}`}
+                  fill
+                  sizes="(min-width: 400px) 100vw"
+                  className="navbarmodal-settings-icon"
+                />
+              </div>
+              <b>{setting}</b>
+            </li>
+          ))}
+        </ul>
+      </menu>
     </nav>
   );
 };
