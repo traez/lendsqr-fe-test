@@ -8,7 +8,7 @@ import { StateContext } from "@/lib/StateProvider";
 
 const Header = () => {
   const router = useRouter();
-  const { toggleModalState, isMenuOpen } = useContext(StateContext)!;
+  const { toggleModalState, isModalOpen } = useContext(StateContext)!;
 
   const handleLogoClick = () => {
     router.push("/");
@@ -85,7 +85,7 @@ const Header = () => {
           </aside>
         </menu>
         <div onClick={toggleModalState} className="header-icon-container">
-          {isMenuOpen ? (
+          {isModalOpen ? (
             <TfiClose size="30px" />
           ) : (
             <RxHamburgerMenu size="30px" />

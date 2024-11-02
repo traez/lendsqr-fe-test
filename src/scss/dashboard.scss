@@ -1,0 +1,18 @@
+.dashboard {
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template:
+    "top" 11fr
+    "box" 18fr
+    "card" 50fr
+    "bottom" 21fr / 1fr;
+
+  @media (min-width: 1024px) {
+    grid-template:
+      "navbar top" 11fr
+      "navbar box" 18fr
+      "navbar card" 50fr
+      "navbar bottom" 21fr / 1fr 4fr;
+  }
+}
