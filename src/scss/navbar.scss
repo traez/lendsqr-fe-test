@@ -253,5 +253,40 @@
         }
       }
     }
+
+    .navbarmodal-logout {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 0px;
+      width: 100%;
+
+      &:hover {
+        border-left: 5px solid #39cdcc;
+        background-color: #e0f7f7;
+        cursor: pointer;
+      }
+
+      .navbarmodal-logout-container {
+        width: 16px;
+        height: 16px;
+        position: relative;
+
+        .navbarmodal-logout {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        color: #213f7d;
+      }
+    }
   }
 }

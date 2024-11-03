@@ -100,4 +100,8 @@ export const arraySettings: Array<DataTypeS> = [
     icon: "icon-audit-logs.svg",
     setting: "Audit Logs",
   },
+  {
+    icon: "icon-systems-messages.svg",
+    setting: "Systems Messages",
+  },
 ];

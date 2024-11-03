@@ -98,6 +98,19 @@ const Navbar = () => {
           ))}
         </ul>
       </menu>
+
+      <menu className="navbarmodal-logout">
+        <div className="navbarmodal-logout-container">
+          <Image
+            src="/icon-logout.svg"
+            alt="navbarmodal-logout"
+            fill
+            sizes="(min-width: 400px) 100vw"
+            className="navbarmodal-logout"
+          />
+        </div>
+        <span>Logout</span>
+      </menu>
     </nav>
   );
 };

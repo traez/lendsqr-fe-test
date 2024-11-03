@@ -1,10 +1,10 @@
-export interface DataType {
+export interface DataTypeBox {
   icon: string;
   utext: string;
   unumber: string;
 }
 
-export const arrayBox: Array<DataType> = [
+export const arrayBox: Array<DataTypeBox> = [
   {
     icon: "icon-box-users.svg",
     utext: "USERS",
