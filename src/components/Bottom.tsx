@@ -2,7 +2,7 @@
 
 const Bottom = () => {
   return (
-    <div className="bottom">Bottom</div>
+    <div className="bottom">{/* Bottom */}</div>
   )
 }
 

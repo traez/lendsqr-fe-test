@@ -1,9 +1,9 @@
-
-
 const Top = () => {
   return (
-    <section className="top">Top</section>
-  )
-}
+    <section className="top">
+      <div>Users</div>
+    </section>
+  );
+};
 
-export default Top
+export default Top;
