@@ -90,67 +90,65 @@ const LCellContent = ({ value }: { value: string }) => {
   );
 };
 
-const SortPopup = () => {
-  return (
-    <div className="sort-popup">
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
-    </div>
-  );
-};
-
-const TableHeader = ({ children }: { children: React.ReactNode }) => {
-  const [showSortPopup, setShowSortPopup] = useState(false);
-
-  return (
-    <span className="table-header">
-      {children}
-      <div className="sort-icon-container">
-        <LuArrowDownWideNarrow
-          className="icon"
-          size="16px"
-          onClick={() => setShowSortPopup(!showSortPopup)}
-        />
-        {showSortPopup && <SortPopup />}
-      </div>
-    </span>
-  );
-};
-
 const columns = [
   columnHelper.accessor("ORGANIZATION", {
     cell: (info) => info.getValue(),
-    header: () => <TableHeader>ORGANIZATION</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        ORGANIZATION
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
   columnHelper.accessor("USERNAME", {
     cell: (info) => info.getValue(),
-    header: () => <TableHeader>USERNAME</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        USERNAME
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
   columnHelper.accessor("EMAIL", {
     cell: (info) => info.getValue(),
-    header: () => <TableHeader>EMAIL</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        EMAIL
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
   columnHelper.accessor("PHONE NUMBER", {
     cell: (info) => info.getValue(),
-    header: () => <TableHeader>PHONE NUMBER</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        PHONE NUMBER
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
   columnHelper.accessor("DATE JOINED", {
     cell: (info) => info.getValue(),
-    header: () => <TableHeader>DATE JOINED</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        DATE JOINED
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
+
   columnHelper.accessor("STATUS", {
     cell: (info) => (
       <div style={getStatusStyle(info.getValue())}>{info.getValue()}</div>
     ),
-    header: () => <TableHeader>STATUS</TableHeader>,
+    header: () => (
+      <span className="table-header">
+        STATUS
+        <LuArrowDownWideNarrow className="icon" size="16px" />
+      </span>
+    ),
   }),
+
   columnHelper.accessor("L", {
     cell: (info) => <LCellContent value={info.getValue()} />,
     header: () => <span className="table-header">L</span>,

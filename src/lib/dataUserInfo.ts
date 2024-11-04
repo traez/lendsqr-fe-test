@@ -1,4 +1,5 @@
 export interface DataTypeUserInfo {
+  L: string;
   ORGANIZATION: string;
   USERNAME: string;
   EMAIL: string;
@@ -78,12 +79,13 @@ export interface DataTypeUserInfo {
 
 export const arrayCard: Array<DataTypeUserInfo> = [
   {
+    L: "I",
     ORGANIZATION: "Tech Innovations Inc.",
     USERNAME: "johndoe123",
     EMAIL: "johndoe@example.com",
     "PHONE NUMBER": "08012345678",
     "DATE JOINED": "May 15, 2023 10:15 AM",
-    STATUS: "Active",
+    STATUS: "Inactive",
     Summary: {
       name: "John Doe",
       key: "account001",
@@ -130,6 +132,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Future Solutions Ltd.",
     USERNAME: "janesmith456",
     EMAIL: "janesmith@example.com",
@@ -182,6 +185,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Digital Solutions Co.",
     USERNAME: "robertsmith789",
     EMAIL: "robertsmith@example.com",
@@ -234,6 +238,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Creative Minds Ltd.",
     USERNAME: "emilyjohnson111",
     EMAIL: "emilyjohnson@example.com",
@@ -286,6 +291,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Global Tech Solutions",
     USERNAME: "charlesbrown222",
     EMAIL: "charlesbrown@example.com",
@@ -338,6 +344,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "InnovateTech Ltd.",
     USERNAME: "karenwhite333",
     EMAIL: "karenwhite@example.com",
@@ -390,6 +397,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Alpha Tech Inc.",
     USERNAME: "lindasmith444",
     EMAIL: "lindasmith@example.com",
@@ -442,6 +450,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Future Vision Corp.",
     USERNAME: "thomastaylor555",
     EMAIL: "thomastaylor@example.com",
@@ -494,6 +503,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Pinnacle Innovations",
     USERNAME: "elizabethharris666",
     EMAIL: "elizabethharris@example.com",
@@ -546,6 +556,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Quantum Solutions",
     USERNAME: "adamjones777",
     EMAIL: "adamjones@example.com",
@@ -599,6 +610,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
   },
 
   {
+    L: "I",
     ORGANIZATION: "Tech Fusion",
     USERNAME: "emilyjames888",
     EMAIL: "emilyjames@example.com",
@@ -651,6 +663,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Next Gen Solutions",
     USERNAME: "michaelclark555",
     EMAIL: "michaelclark@example.com",
@@ -703,6 +716,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Future Tech Innovations",
     USERNAME: "sarahmiller999",
     EMAIL: "sarahmiller@example.com",
@@ -755,6 +769,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Digital Solutions",
     USERNAME: "benjaminmoore222",
     EMAIL: "benjaminmoore@example.com",
@@ -807,6 +822,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Advanced Tech Group",
     USERNAME: "lucywilliams333",
     EMAIL: "lucywilliams@example.com",
@@ -859,6 +875,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Innovative Systems",
     USERNAME: "charlesadams444",
     EMAIL: "charlesadams@example.com",
@@ -911,6 +928,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Smart Solutions Inc.",
     USERNAME: "katherinelee111",
     EMAIL: "katherinelee@example.com",
@@ -963,6 +981,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Tech Edge Solutions",
     USERNAME: "andrewwhite888",
     EMAIL: "andrewwhite@example.com",
@@ -1015,6 +1034,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Global Innovations",
     USERNAME: "oliviasmith777",
     EMAIL: "oliviasmith@example.com",
@@ -1067,6 +1087,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Visionary Technologies",
     USERNAME: "emilyjohnson222",
     EMAIL: "emilyjohnson@example.com",
@@ -1119,6 +1140,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Dynamic Ventures",
     USERNAME: "davidmartin555",
     EMAIL: "davidmartin@example.com",
@@ -1171,6 +1193,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Nexus Group",
     USERNAME: "michealclark777",
     EMAIL: "michealclark@example.com",
@@ -1223,6 +1246,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Synergy Solutions",
     USERNAME: "jessicawilliams333",
     EMAIL: "jessicawilliams@example.com",
@@ -1276,6 +1300,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
   },
 
   {
+    L: "I",
     ORGANIZATION: "Innovation Labs",
     USERNAME: "sarahjames444",
     EMAIL: "sarahjames@example.com",
@@ -1328,6 +1353,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
   },
   {
+    L: "I",
     ORGANIZATION: "Global Solutions",
     USERNAME: "peterparker555",
     EMAIL: "peterparker@example.com",
