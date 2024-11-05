@@ -1,0 +1,9 @@
+.details {
+  grid-area: details;
+  display: grid;
+  grid-template:
+    "aaa" 11fr
+    "bbb" 15fr
+    "ccc" 64fr
+    "ddd" 10fr / 1fr;
+}

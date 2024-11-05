@@ -1,14 +1,26 @@
 "use client";
-import { useParams } from "next/navigation";
-import { arrayCard } from "@/lib/dataUserInfo";
+import { useContext } from "react";
+import { StateContext } from "@/lib/StateProvider";
+import Navbar from "./Navbar";
+import NavbarModal from "./NavbarModal";
+import Details from "./Details";
 
 const UserDetails = () => {
-  const params = useParams();
-  const usernameP = params.username;
-  const userInfo = arrayCard.find((user) => user.USERNAME === usernameP);
-  console.log(userInfo);
+  const { isModalOpen } = useContext(StateContext)!;
 
-  return <div>UserDetails</div>;
+  return (
+    <>
+      <div className="userdetails">
+        <Navbar />
+        {!isModalOpen && (
+          <>
+            <Details />
+          </>
+        )}
+      </div>
+      {isModalOpen && <NavbarModal />}
+    </>
+  );
 };
 
 export default UserDetails;

@@ -1,0 +1,13 @@
+.userdetails {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template:
+      "details" 1fr / 1fr;
+  
+    @media (min-width: 1024px) {
+      grid-template:
+        "navbar details" 1fr / 1fr 4fr;
+    }
+  }
+  
