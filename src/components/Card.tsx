@@ -1,6 +1,7 @@
 "use client";
 import { useState, CSSProperties } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   createColumnHelper,
   flexRender,
@@ -130,7 +131,14 @@ const columns = [
     header: () => <TableHeader>ORGANIZATION</TableHeader>,
   }),
   columnHelper.accessor("USERNAME", {
-    cell: (info) => info.getValue(),
+    cell: (info) => (
+      <Link
+        href={`/dashboard/userdetails/${info.getValue()}`}
+        className="username-cell"
+      >
+        {info.getValue()}
+      </Link>
+    ),
     header: () => <TableHeader>USERNAME</TableHeader>,
   }),
   columnHelper.accessor("EMAIL", {
