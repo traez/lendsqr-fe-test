@@ -92,17 +92,40 @@ const LCellContent = ({ value }: { value: string }) => {
 };
 
 const SortPopup = () => {
+  const popupAside = {
+    Organization: ["Select", "/icon-switch-v-dropdown.svg"],
+    Username: ["User", ""],
+    Email: ["Email", ""],
+    Date: ["Date", "/icon-calendar.svg"],
+    "Phone Number": ["Phone Number", ""],
+    Status: ["Select", "/icon-switch-v-dropdown.svg"],
+  };
+
   return (
     <div className="sort-popup">
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
-      <p>Ascending</p>
-      <p>Descending</p>
-      <p>Reset</p>
+      {Object.entries(popupAside).map(([label, [placeholder, icon]]) => (
+        <aside key={label}>
+          <label>{label}</label>
+          <nav>
+            <b>{placeholder}</b>
+            <div className="sortpopup-container">
+              {icon && (
+                <Image
+                  src={icon}
+                  alt={`${label}-icon`}
+                  fill
+                  sizes="(min-width: 400px) 100vw"
+                  className="sortpopup-icon"
+                />
+              )}
+            </div>
+          </nav>
+        </aside>
+      ))}
+      <menu>
+        <button className="reset">Reset</button>
+        <button className="filter">Filter</button>
+      </menu>
     </div>
   );
 };
@@ -133,7 +156,7 @@ const columns = [
   columnHelper.accessor("USERNAME", {
     cell: (info) => (
       <Link
-        href={`/dashboard/userdetails/${info.getValue()}`}
+        href={`/dashboard/user/${info.getValue()}`}
         className="username-cell"
       >
         {info.getValue()}

@@ -1,0 +1,36 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 25vh;  /* Positions the container around the 25% mark */
+
+  color: #333;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4c4c;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: #0070f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+}
