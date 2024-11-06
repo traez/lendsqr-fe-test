@@ -1,0 +1,18 @@
+.detailsccc {
+  grid-area: detailsccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 20px;
+
+  @media (min-width: 1024px) {
+    margin: 0 60px;
+  }
+
+  b {
+    color: #213f7d;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

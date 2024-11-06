@@ -1,6 +1,9 @@
 "use client";
 import { useParams } from "next/navigation";
 import { arrayCard } from "@/lib/dataUserInfo";
+import DetailsAAA from "./DetailsAAA";
+import DetailsBBB from "./DetailsBBB";
+import DetailsCCC from "./DetailsCCC";
 
 const Details = () => {
   const params = useParams();
@@ -11,10 +14,10 @@ const Details = () => {
   return (
     <>
       <section className="details">
-        <article className="aaa">aaa</article>
-        <article className="bbb">bbb</article>
-        <article className="ccc">ccc</article>
-        <article className="ddd">ddd</article>
+        <DetailsAAA />
+        <DetailsBBB />
+        <DetailsCCC />
+        <article className="detailsddd">ddd</article>
       </section>
     </>
   );

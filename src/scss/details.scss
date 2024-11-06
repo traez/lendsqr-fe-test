@@ -2,8 +2,10 @@
   grid-area: details;
   display: grid;
   grid-template:
-    "aaa" 11fr
-    "bbb" 15fr
-    "ccc" 64fr
-    "ddd" 10fr / 1fr;
+    "detailsaaa" 11fr
+    "detailsbbb" 15fr
+    "detailsccc" 64fr
+    "detailsddd" 10fr / 1fr;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

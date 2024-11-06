@@ -1,0 +1,88 @@
+.detailsaaa {
+  grid-area: detailsaaa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+
+  @media (min-width: 1024px) {
+    padding: 0 60px;
+  }
+
+  .article-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 60%;
+
+    .aside-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 140px;
+
+      .icon-arrow-left-container {
+        width: 27px;
+        height: 27px;
+        position: relative;
+
+        .icon-arrow-left {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      nav {
+        color: #545f7d;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    .aside-right {
+      color: #213f7d;
+      font-weight: 500;
+      font-size: 22px;
+      width: 140px;
+      height: 28px;
+    }
+  }
+  .article-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+    button {
+      width: 170px;
+      height: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .blacklist {
+      color: #e4033b;
+      border: 1px solid #e4033b;
+    }
+
+    .activate {
+      color: #39cdcc;
+      border: 1px solid #39cdcc;
+    }
+  }
+}
