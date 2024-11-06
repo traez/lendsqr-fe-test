@@ -1,13 +1,15 @@
 const DetailsCCC = () => {
-  const popupAside = {
-    Organization: ["Select", "/icon-switch-v-dropdown.svg"],
-    Username: ["User", ""],
-    Email: ["Email", ""],
-    Date: ["Date", "/icon-calendar.svg"],
-    "Phone Number": ["Phone Number", ""],
-    Status: ["Select", "/icon-switch-v-dropdown.svg"],
-  };
-  
+  /* const personalInfo = {
+    "FULL NAME": "Grace Effiom",
+    "PHONE NUMBER": 97012345678,
+    "EMAIL ADDRESS": "grace@gmail.com",
+    BVN: 12345678901,
+     GENDER: "Female",
+    "MARITAL STATUS": "Single", 
+    CHILDREN: 0,
+    "TYPE OF RESIDENCE": "Renting",
+  }; */
+
   return (
     <section className="detailsccc">
       <b>Personal Information</b>
