@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const DetailsAAA = () => {
   return (
     <>
       <section className="detailsaaa">
         <article className="article-left">
-          <aside className="aside-left">
+          <Link href="/dashboard" className="aside-left">
             <div className="icon-arrow-left-container">
               <Image
                 src="/icon-arrow-left.svg"
@@ -16,7 +17,7 @@ const DetailsAAA = () => {
               />
             </div>
             <nav>Back to Users</nav>
-          </aside>
+          </Link>
           <aside className="aside-right">User Details</aside>
         </article>
         <article className="article-right">

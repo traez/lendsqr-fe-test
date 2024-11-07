@@ -17,7 +17,7 @@ const Details = () => {
         <DetailsAAA />
         <DetailsBBB />
         <DetailsCCC />
-        <article className="detailsddd">ddd</article>
+        <article className="detailsddd">.</article>
       </section>
     </>
   );

@@ -1,5 +1,3 @@
-//Gender missing
-
 export interface DataTypeUserInfo {
   L: string;
   ORGANIZATION: string;
@@ -17,9 +15,10 @@ export interface DataTypeUserInfo {
   };
   "Personal Information": {
     "FULL NAME": string;
-    "PHONE NUMBER": number;
+    "PHONE NUMBER": string;
     "EMAIL ADDRESS": string;
-    BVN: number;
+    BVN: string;
+    GENDER: "Male" | "Female";
     "MARITAL STATUS": "Single" | "Married" | "Divorced" | "Widowed";
     CHILDREN: number;
     "TYPE OF RESIDENCE":
@@ -97,9 +96,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Johnathan Doe",
-      "PHONE NUMBER": 9876543210,
+      "PHONE NUMBER": "9876543210",
       "EMAIL ADDRESS": "johnathan.doe@example.com",
-      BVN: 12345678901,
+      BVN: "12345678901",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -150,9 +150,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Jane Alicia Smith",
-      "PHONE NUMBER": 8765432109,
+      "PHONE NUMBER": "8765432109",
       "EMAIL ADDRESS": "jane.alicia@example.com",
-      BVN: 23456789012,
+      BVN: "23456789012",
+      GENDER: "Female",
       "MARITAL STATUS": "Married",
       CHILDREN: 2,
       "TYPE OF RESIDENCE": "Own House",
@@ -203,9 +204,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Robert Michael Smith",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "robert.m@example.com",
-      BVN: 34567890123,
+      BVN: "34567890123",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 1,
       "TYPE OF RESIDENCE": "Parents' Apartment",
@@ -256,9 +258,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Emily Anne Johnson",
-      "PHONE NUMBER": 3456789012,
+      "PHONE NUMBER": "3456789012",
       "EMAIL ADDRESS": "emily.j@example.com",
-      BVN: 45678901234,
+      BVN: "45678901234",
+      GENDER: "Female",
       "MARITAL STATUS": "Divorced",
       CHILDREN: 1,
       "TYPE OF RESIDENCE": "Renting",
@@ -309,9 +312,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Charles Michael Brown",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "charles.m@example.com",
-      BVN: 56789012345,
+      BVN: "56789012345",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Own House",
@@ -362,9 +366,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Karen Elizabeth White",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "karen.e@example.com",
-      BVN: 67890123456,
+      BVN: "67890123456",
+      GENDER: "Female",
       "MARITAL STATUS": "Married",
       CHILDREN: 3,
       "TYPE OF RESIDENCE": "Renting",
@@ -415,9 +420,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Linda Marie Smith",
-      "PHONE NUMBER": 3456789012,
+      "PHONE NUMBER": "3456789012",
       "EMAIL ADDRESS": "linda.m@example.com",
-      BVN: 78901234567,
+      BVN: "78901234567",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -468,9 +474,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Thomas Samuel Taylor",
-      "PHONE NUMBER": 9876543210,
+      "PHONE NUMBER": "9876543210",
       "EMAIL ADDRESS": "thomas.s@example.com",
-      BVN: 89012345678,
+      BVN: "89012345678",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 2,
       "TYPE OF RESIDENCE": "Own House",
@@ -521,9 +528,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Elizabeth Anne Harris",
-      "PHONE NUMBER": 3456789012,
+      "PHONE NUMBER": "3456789012",
       "EMAIL ADDRESS": "elizabeth.a@example.com",
-      BVN: 90123456789,
+      BVN: "90123456789",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -574,9 +582,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Adam Michael Jones",
-      "PHONE NUMBER": 5678901234,
+      "PHONE NUMBER": "5678901234",
       "EMAIL ADDRESS": "adam.j@example.com",
-      BVN: 23456789012,
+      BVN: "23456789012",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -628,9 +637,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Emily Anne James",
-      "PHONE NUMBER": 3456789012,
+      "PHONE NUMBER": "3456789012",
       "EMAIL ADDRESS": "emily.a@example.com",
-      BVN: 12345678901,
+      BVN: "12345678901",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -681,9 +691,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Michael Adam Clark",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "michael.c@example.com",
-      BVN: 23456789012,
+      BVN: "23456789012",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 1,
       "TYPE OF RESIDENCE": "Own House",
@@ -734,9 +745,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Sarah Jane Miller",
-      "PHONE NUMBER": 9876543210,
+      "PHONE NUMBER": "9876543210",
       "EMAIL ADDRESS": "sarah.j@example.com",
-      BVN: 34567890123,
+      BVN: "34567890123",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -787,9 +799,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Benjamin Ryan Moore",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "benjamin.r@example.com",
-      BVN: 45678901234,
+      BVN: "45678901234",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 2,
       "TYPE OF RESIDENCE": "Own House",
@@ -840,9 +853,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Lucy Anne Williams",
-      "PHONE NUMBER": 8765432109,
+      "PHONE NUMBER": "8765432109",
       "EMAIL ADDRESS": "lucy.a@example.com",
-      BVN: 56789012345,
+      BVN: "56789012345",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -893,9 +907,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Charles David Adams",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "charles.d@example.com",
-      BVN: 67890123456,
+      BVN: "67890123456",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 3,
       "TYPE OF RESIDENCE": "Own House",
@@ -946,9 +961,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Katherine Marie Lee",
-      "PHONE NUMBER": 4987654321,
+      "PHONE NUMBER": "4987654321",
       "EMAIL ADDRESS": "katherine.m@example.com",
-      BVN: 78901234567,
+      BVN: "78901234567",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -999,9 +1015,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Andrew Thomas White",
-      "PHONE NUMBER": 1357924680,
+      "PHONE NUMBER": "1357924680",
       "EMAIL ADDRESS": "andrew.t@example.com",
-      BVN: 89012345678,
+      BVN: "89012345678",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 1,
       "TYPE OF RESIDENCE": "Own House",
@@ -1052,9 +1069,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Olivia Grace Smith",
-      "PHONE NUMBER": 2143658790,
+      "PHONE NUMBER": "2143658790",
       "EMAIL ADDRESS": "olivia.g@example.com",
-      BVN: 90123456789,
+      BVN: "90123456789",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -1105,9 +1123,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Emily Rose Johnson",
-      "PHONE NUMBER": 1234567891,
+      "PHONE NUMBER": "1234567891",
       "EMAIL ADDRESS": "emily.r@example.com",
-      BVN: 91234567890,
+      BVN: "91234567890",
+      GENDER: "Female",
       "MARITAL STATUS": "Married",
       CHILDREN: 2,
       "TYPE OF RESIDENCE": "Renting",
@@ -1158,9 +1177,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "David Michael Martin",
-      "PHONE NUMBER": 1098765432,
+      "PHONE NUMBER": "1098765432",
       "EMAIL ADDRESS": "david.m@example.com",
-      BVN: 12345678901,
+      BVN: "12345678901",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -1211,9 +1231,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Micheal Andrew Clark",
-      "PHONE NUMBER": 2143658709,
+      "PHONE NUMBER": "2143658709",
       "EMAIL ADDRESS": "micheal.a@example.com",
-      BVN: 23456789012,
+      BVN: "23456789012",
+      GENDER: "Male",
       "MARITAL STATUS": "Married",
       CHILDREN: 1,
       "TYPE OF RESIDENCE": "Own House",
@@ -1264,9 +1285,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Jessica Anne Williams",
-      "PHONE NUMBER": 1234567890,
+      "PHONE NUMBER": "1234567890",
       "EMAIL ADDRESS": "jessica.a@example.com",
-      BVN: 34567890123,
+      BVN: "34567890123",
+      GENDER: "Female",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",
@@ -1318,9 +1340,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Sarah Elizabeth James",
-      "PHONE NUMBER": 3456789012,
+      "PHONE NUMBER": "3456789012",
       "EMAIL ADDRESS": "sarah.e.james@example.com",
-      BVN: 98765432101,
+      BVN: "98765432101",
+      GENDER: "Female",
       "MARITAL STATUS": "Married",
       CHILDREN: 3,
       "TYPE OF RESIDENCE": "Own House",
@@ -1371,9 +1394,10 @@ export const arrayCard: Array<DataTypeUserInfo> = [
     },
     "Personal Information": {
       "FULL NAME": "Peter Benjamin Parker",
-      "PHONE NUMBER": 5678901234,
+      "PHONE NUMBER": "5678901234",
       "EMAIL ADDRESS": "peter.b.parker@example.com",
-      BVN: 67890123456,
+      BVN: "67890123456",
+      GENDER: "Male",
       "MARITAL STATUS": "Single",
       CHILDREN: 0,
       "TYPE OF RESIDENCE": "Renting",

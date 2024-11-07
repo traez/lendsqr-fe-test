@@ -8,10 +8,12 @@ const DetailsBBB = () => {
           <aside className="aside-a">
             <div className="icon-user-pp-container">
               <Image
-                src="/icon-user-pp.png"
+                src="/icon-user-ppp.svg"
                 alt="icon-user-pp"
-                fill
+                /*   fill */
                 sizes="(min-width: 400px) 100vw"
+                width={40} 
+                height={40} 
                 className="icon-user-pp"
               />
             </div>

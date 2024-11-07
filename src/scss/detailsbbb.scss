@@ -19,6 +19,7 @@
     justify-content: start;
     align-items: center;
     width: 100%;
+    padding-top: 10px;
 
     .aside-a {
       width: 260px;
@@ -57,13 +58,20 @@
         width: 80px;
         height: 80px;
         position: relative;
+        background-color: #e4e4e6;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .icon-user-pp {
-          width: 100%;
-          height: auto;
           position: absolute;
+         /*  width: 100%;
+          height: auto;
           top: 0;
           left: 0;
+          object-fit: contain; */
         }
       }
     }
