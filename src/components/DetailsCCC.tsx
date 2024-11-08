@@ -1,43 +1,54 @@
-const DetailsCCC = () => {
+import { UserType } from "@/lib/dataUserType";
+
+interface DetailsCCCProps {
+  userInfo: UserType | undefined;
+}
+
+const DetailsCCC = ({ userInfo }: DetailsCCCProps) => {
   const personalInfo = {
-    "FULL NAME": "Grace Effiom",
-    "PHONE NUMBER": "97012345678",
-    "EMAIL ADDRESS": "grace@gmail.com",
-    BVN: "12345678901",
-    GENDER: "Female",
-    "MARITAL STATUS": "Single",
-    CHILDREN: 0,
-    "TYPE OF RESIDENCE": "Renting",
+    "FULL NAME": userInfo?.["Personal Information"]["FULL NAME"],
+    "PHONE NUMBER": userInfo?.["Personal Information"]["PHONE NUMBER"],
+    "EMAIL ADDRESS": userInfo?.["Personal Information"]["EMAIL ADDRESS"],
+    BVN: userInfo?.["Personal Information"].BVN,
+    GENDER: userInfo?.["Personal Information"].GENDER,
+    "MARITAL STATUS": userInfo?.["Personal Information"]["MARITAL STATUS"],
+    CHILDREN: userInfo?.["Personal Information"].CHILDREN,
+    "TYPE OF RESIDENCE":
+      userInfo?.["Personal Information"]["TYPE OF RESIDENCE"],
   };
 
   const educationEmployment = {
-    "LEVEL OF EDUCATION": "Degree",
-    "EMPLOYMENT STATUS": "Employed",
-    "SECTOR OF EMPLOYMENT": "Medical",
-    "DURATION OF EMPLOYMENT": "1 - 2 years",
-    "OFFICE EMAIL": "bob@trump.com",
-    "MONTHLY INCOME": "N50,000 - N100,000",
-    "LOAN REPAYMENT": "9000",
+    "LEVEL OF EDUCATION":
+      userInfo?.["Education and Employment"]["LEVEL OF EDUCATION"],
+    "EMPLOYMENT STATUS":
+      userInfo?.["Education and Employment"]["EMPLOYMENT STATUS"],
+    "SECTOR OF EMPLOYMENT":
+      userInfo?.["Education and Employment"]["SECTOR OF EMPLOYMENT"],
+    "DURATION OF EMPLOYMENT":
+      userInfo?.["Education and Employment"]["DURATION OF EMPLOYMENT"],
+    "OFFICE EMAIL": userInfo?.["Education and Employment"]["OFFICE EMAIL"],
+    "MONTHLY INCOME": userInfo?.["Education and Employment"]["MONTHLY INCOME"],
+    "LOAN REPAYMENT": userInfo?.["Education and Employment"]["LOAN REPAYMENT"],
   };
 
   const socials = {
-    "TWITTER": "@janesmith",
-    "FACEBOOK": "Jane Smith",
-    "INSTAGRAM": "@jane_smith_official",
+    TWITTER: userInfo?.Socials.TWITTER,
+    FACEBOOK: userInfo?.Socials.FACEBOOK,
+    INSTAGRAM: userInfo?.Socials.INSTAGRAM,
   };
 
   const guarantor1 = {
-    "FULL NAME": "Michael Brown",
-    "PHONE NUMBER": "3456789012",
-    "EMAIL ADDRESS": "michaelbrown@example.com",
-    "RELATIONSHIP": "Brother",
+    "FULL NAME": userInfo?.Guarantor["Guarantor 1"]["FULL NAME"],
+    "PHONE NUMBER": userInfo?.Guarantor["Guarantor 1"]["PHONE NUMBER"],
+    "EMAIL ADDRESS": userInfo?.Guarantor["Guarantor 1"]["EMAIL ADDRESS"],
+    RELATIONSHIP: userInfo?.Guarantor["Guarantor 1"].RELATIONSHIP,
   };
 
   const guarantor2 = {
-    "FULL NAME": "Emily Green",
-    "PHONE NUMBER": "3453849012",
-    "EMAIL ADDRESS": "emilygreen@example.com",
-    "RELATIONSHIP": "Colleague",
+    "FULL NAME": userInfo?.Guarantor["Guarantor 2"]["FULL NAME"],
+    "PHONE NUMBER": userInfo?.Guarantor["Guarantor 2"]["PHONE NUMBER"],
+    "EMAIL ADDRESS": userInfo?.Guarantor["Guarantor 2"]["EMAIL ADDRESS"],
+    RELATIONSHIP: userInfo?.Guarantor["Guarantor 2"].RELATIONSHIP,
   };
 
   return (

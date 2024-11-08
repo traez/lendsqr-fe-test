@@ -1,4 +1,4 @@
-export interface DataType {
+export interface DataTypeC {
   icon: string;
   customer: string;
 }
@@ -13,7 +13,7 @@ export interface DataTypeS {
   setting: string;
 }
 
-export const arrayCustomers: Array<DataType> = [
+export const arrayCustomers: Array<DataTypeC> = [
   {
     icon: "icon-users.svg",
     customer: "Users",

@@ -3,7 +3,11 @@ import { useContext } from "react";
 import Image from "next/image";
 import { TfiClose } from "react-icons/tfi";
 import { StateContext } from "@/lib/StateProvider";
-import { arrayCustomers, arrayBusinesses, arraySettings } from "@/lib/data";
+import {
+  arrayCustomers,
+  arrayBusinesses,
+  arraySettings,
+} from "@/lib/dataCusBusSet";
 
 const NavbarModal = () => {
   const { toggleModalState } = useContext(StateContext)!;

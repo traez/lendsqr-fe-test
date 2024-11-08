@@ -1,5 +1,5 @@
 "use client";
-import { useState, CSSProperties } from "react";
+import { useState, useContext, CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,9 +13,12 @@ import {
 import { LuArrowDownWideNarrow } from "react-icons/lu";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
-import { DataTypeUserInfo, arrayCard } from "@/lib/dataUserInfo";
+import { StateContext } from "@/lib/StateProvider";
+import { UserType } from "@/lib/dataUserType";
+//import { DataTypeUserInfo, arrayCard } from "@/lib/dataUserInfo";
 
-const columnHelper = createColumnHelper<DataTypeUserInfo>();
+//const columnHelper = createColumnHelper<DataTypeUserInfo>();
+const columnHelper = createColumnHelper<UserType>();
 
 const getStatusStyle = (status: string): CSSProperties => {
   switch (status) {
@@ -189,11 +192,17 @@ const columns = [
 ];
 
 export default function Card() {
-  const [data] = useState(() => [...arrayCard]);
+  const { userData, isLoading } = useContext(StateContext)!
+  //const [data] = useState(() => [...arrayCard]);
+
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
   });
+
+  const data = userData ?? []
+
+  //console.log(userData);
 
   const table = useReactTable({
     data,
@@ -203,6 +212,14 @@ export default function Card() {
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (!userData || userData.length === 0) {
+    return <div>No data available</div>
+  }
 
   return (
     <section className="card">

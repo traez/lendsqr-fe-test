@@ -1,3 +1,5 @@
+// https://api.mockaron.com/mock/lc99wiyhr5/users
+
 export interface DataTypeUserInfo {
   L: string;
   ORGANIZATION: string;
@@ -10,7 +12,7 @@ export interface DataTypeUserInfo {
     name: string;
     key: string;
     balance: number;
-    "account number": number;
+    "account number": string;
     bank: string;
   };
   "Personal Information": {
@@ -20,7 +22,7 @@ export interface DataTypeUserInfo {
     BVN: string;
     GENDER: "Male" | "Female";
     "MARITAL STATUS": "Single" | "Married" | "Divorced" | "Widowed";
-    CHILDREN: number;
+    CHILDREN: string;
     "TYPE OF RESIDENCE":
       | "Parents' Apartment"
       | "Friend or Family's"
@@ -91,7 +93,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "John Doe",
       key: "account001",
       balance: 1500.75,
-      "account number": 9987654321,
+      "account number": "9987654321",
       bank: "Example Bank",
     },
     "Personal Information": {
@@ -101,7 +103,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "12345678901",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -145,7 +147,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Jane Smith",
       key: "account002",
       balance: 3200.5,
-      "account number": 8899776655,
+      "account number": "8899776655",
       bank: "NextGen Bank",
     },
     "Personal Information": {
@@ -155,7 +157,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "23456789012",
       GENDER: "Female",
       "MARITAL STATUS": "Married",
-      CHILDREN: 2,
+      CHILDREN: "2",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -199,7 +201,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Robert Smith",
       key: "account003",
       balance: 2900.0,
-      "account number": 1234567890,
+      "account number": "1234567890",
       bank: "First National Bank",
     },
     "Personal Information": {
@@ -209,7 +211,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "34567890123",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 1,
+      CHILDREN: "1",
       "TYPE OF RESIDENCE": "Parents' Apartment",
     },
     "Education and Employment": {
@@ -253,7 +255,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Emily Johnson",
       key: "account004",
       balance: 1500.0,
-      "account number": 1122334455,
+      "account number": "1122334455",
       bank: "Standard Bank",
     },
     "Personal Information": {
@@ -263,7 +265,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "45678901234",
       GENDER: "Female",
       "MARITAL STATUS": "Divorced",
-      CHILDREN: 1,
+      CHILDREN: "1",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -307,7 +309,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Charles Brown",
       key: "account005",
       balance: 4500.25,
-      "account number": 2233445566,
+      "account number": "2233445566",
       bank: "United Bank",
     },
     "Personal Information": {
@@ -317,7 +319,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "56789012345",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -361,7 +363,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Karen White",
       key: "account006",
       balance: 3700.15,
-      "account number": 3344556677,
+      "account number": "3344556677",
       bank: "City Bank",
     },
     "Personal Information": {
@@ -371,7 +373,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "67890123456",
       GENDER: "Female",
       "MARITAL STATUS": "Married",
-      CHILDREN: 3,
+      CHILDREN: "3",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -415,7 +417,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Linda Smith",
       key: "account007",
       balance: 2200.5,
-      "account number": 4455667788,
+      "account number": "4455667788",
       bank: "Nationwide Bank",
     },
     "Personal Information": {
@@ -425,7 +427,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "78901234567",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -469,7 +471,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Thomas Taylor",
       key: "account008",
       balance: 3000.75,
-      "account number": 5566778899,
+      "account number": "5566778899",
       bank: "Trust Bank",
     },
     "Personal Information": {
@@ -479,7 +481,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "89012345678",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 2,
+      CHILDREN: "2",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -523,7 +525,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Elizabeth Harris",
       key: "account009",
       balance: 1800.0,
-      "account number": 6677889900,
+      "account number": "6677889900",
       bank: "Central Bank",
     },
     "Personal Information": {
@@ -533,7 +535,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "90123456789",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -577,7 +579,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Adam Jones",
       key: "account010",
       balance: 2400.0,
-      "account number": 7788990011,
+      "account number": "7788990011",
       bank: "State Bank",
     },
     "Personal Information": {
@@ -587,7 +589,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "23456789012",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -632,7 +634,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Emily James",
       key: "account011",
       balance: 1500.25,
-      "account number": 2233445566,
+      "account number": "2233445566",
       bank: "Metro Bank",
     },
     "Personal Information": {
@@ -642,7 +644,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "12345678901",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -686,7 +688,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Michael Clark",
       key: "account012",
       balance: 3200.0,
-      "account number": 5566778899,
+      "account number": "5566778899",
       bank: "Future Bank",
     },
     "Personal Information": {
@@ -696,7 +698,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "23456789012",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 1,
+      CHILDREN: "1",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -740,7 +742,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Sarah Miller",
       key: "account013",
       balance: 2400.8,
-      "account number": 6677889900,
+      "account number": "6677889900",
       bank: "National Bank",
     },
     "Personal Information": {
@@ -750,7 +752,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "34567890123",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -794,7 +796,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Benjamin Moore",
       key: "account014",
       balance: 5000.0,
-      "account number": 3344556677,
+      "account number": "3344556677",
       bank: "City Bank",
     },
     "Personal Information": {
@@ -804,7 +806,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "45678901234",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 2,
+      CHILDREN: "2",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -848,7 +850,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Lucy Williams",
       key: "account015",
       balance: 3900.5,
-      "account number": 9988776655,
+      "account number": "9988776655",
       bank: "Global Bank",
     },
     "Personal Information": {
@@ -858,7 +860,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "56789012345",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -902,7 +904,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Charles Adams",
       key: "account016",
       balance: 2900.0,
-      "account number": 1122334455,
+      "account number": "1122334455",
       bank: "Premier Bank",
     },
     "Personal Information": {
@@ -912,7 +914,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "67890123456",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 3,
+      CHILDREN: "3",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -956,7 +958,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Katherine Lee",
       key: "account017",
       balance: 3700.75,
-      "account number": 7766554433,
+      "account number": "7766554433",
       bank: "Liberty Bank",
     },
     "Personal Information": {
@@ -966,7 +968,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "78901234567",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -1010,7 +1012,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Andrew White",
       key: "account018",
       balance: 4100.0,
-      "account number": 6655443322,
+      "account number": "6655443322",
       bank: "Eagle Bank",
     },
     "Personal Information": {
@@ -1020,7 +1022,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "89012345678",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 1,
+      CHILDREN: "1",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -1064,7 +1066,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Olivia Smith",
       key: "account019",
       balance: 5200.5,
-      "account number": 1122334455,
+      "account number": "1122334455",
       bank: "Summit Bank",
     },
     "Personal Information": {
@@ -1074,7 +1076,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "90123456789",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -1118,7 +1120,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Emily Johnson",
       key: "account020",
       balance: 3100.25,
-      "account number": 9988776655,
+      "account number": "9988776655",
       bank: "Pinnacle Bank",
     },
     "Personal Information": {
@@ -1128,7 +1130,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "91234567890",
       GENDER: "Female",
       "MARITAL STATUS": "Married",
-      CHILDREN: 2,
+      CHILDREN: "2",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -1172,7 +1174,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "David Martin",
       key: "account021",
       balance: 6000.0,
-      "account number": 5544332211,
+      "account number": "5544332211",
       bank: "Future Bank",
     },
     "Personal Information": {
@@ -1182,7 +1184,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "12345678901",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -1226,7 +1228,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Micheal Clark",
       key: "account022",
       balance: 4800.0,
-      "account number": 3344556677,
+      "account number": "3344556677",
       bank: "Nexus Bank",
     },
     "Personal Information": {
@@ -1236,7 +1238,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "23456789012",
       GENDER: "Male",
       "MARITAL STATUS": "Married",
-      CHILDREN: 1,
+      CHILDREN: "1",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -1280,7 +1282,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Jessica Williams",
       key: "account023",
       balance: 3500.25,
-      "account number": 5566778899,
+      "account number": "5566778899",
       bank: "Alliance Bank",
     },
     "Personal Information": {
@@ -1290,7 +1292,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "34567890123",
       GENDER: "Female",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {
@@ -1335,7 +1337,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Sarah James",
       key: "account024",
       balance: 7200.5,
-      "account number": 6677889900,
+      "account number": "6677889900",
       bank: "Innovation Bank",
     },
     "Personal Information": {
@@ -1345,7 +1347,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "98765432101",
       GENDER: "Female",
       "MARITAL STATUS": "Married",
-      CHILDREN: 3,
+      CHILDREN: "3",
       "TYPE OF RESIDENCE": "Own House",
     },
     "Education and Employment": {
@@ -1389,7 +1391,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       name: "Peter Parker",
       key: "account025",
       balance: 8500.75,
-      "account number": 1122334455,
+      "account number": "1122334455",
       bank: "Global Bank",
     },
     "Personal Information": {
@@ -1399,7 +1401,7 @@ export const arrayCard: Array<DataTypeUserInfo> = [
       BVN: "67890123456",
       GENDER: "Male",
       "MARITAL STATUS": "Single",
-      CHILDREN: 0,
+      CHILDREN: "0",
       "TYPE OF RESIDENCE": "Renting",
     },
     "Education and Employment": {

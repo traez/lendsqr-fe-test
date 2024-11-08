@@ -1,6 +1,16 @@
 import Image from "next/image";
+import { UserType } from "@/lib/dataUserType";
 
-const DetailsBBB = () => {
+interface DetailsBBBProps {
+  userInfo: UserType | undefined;
+}
+
+const DetailsBBB = ({ userInfo }: DetailsBBBProps) => {
+
+  const formattedBalance = userInfo?.Summary.balance
+    ? new Intl.NumberFormat("en-US").format(userInfo.Summary.balance)
+    : "0";
+
   return (
     <>
       <section className="detailsbbb">
@@ -12,14 +22,14 @@ const DetailsBBB = () => {
                 alt="icon-user-pp"
                 /*   fill */
                 sizes="(min-width: 400px) 100vw"
-                width={40} 
-                height={40} 
+                width={40}
+                height={40}
                 className="icon-user-pp"
               />
             </div>
             <nav>
-              <b>Grace Effiom</b>
-              <p>LSQFf587g90</p>
+              <b>{userInfo?.Summary.name}</b>
+              <p>{userInfo?.Summary.key}</p>
             </nav>
           </aside>
           <aside className="aside-b">
@@ -56,12 +66,13 @@ const DetailsBBB = () => {
           </aside>
           <aside className="aside-c">
             <b>
-              <span>N</span>200,000.00
+              <span>N</span>
+              {formattedBalance}
             </b>
             <p>
-              <span className="numba">9912345678</span>
+              <span className="numba">{userInfo?.Summary["account number"]}</span>
               <span className="slash">/</span>
-              <span className="bank">Providus Bank</span>
+              <span className="bank">{userInfo?.Summary.bank}</span>
             </p>
           </aside>
         </article>

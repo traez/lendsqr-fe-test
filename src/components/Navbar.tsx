@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { arrayCustomers, arrayBusinesses, arraySettings } from "@/lib/data";
+import {
+  arrayCustomers,
+  arrayBusinesses,
+  arraySettings,
+} from "@/lib/dataCusBusSet";
 
 const Navbar = () => {
   return (
