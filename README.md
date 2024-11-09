@@ -37,7 +37,7 @@ Ensure the entire app is responsive and visually matches the provided Figma desi
 
 ### Screenshot
 
-![](/public/screenshot-desktop.png)
+![](/public/screenshot-desktopnew.png)
 
 ### Links
 
