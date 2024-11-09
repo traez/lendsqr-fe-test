@@ -1,6 +1,6 @@
-# Nextjs MySQL Fullstack App
+# Lendsqr Frontend Engineer Assessment
 
-To enhance my full-stack development skills, I am transitioning from using non-relational databases (MongoDB) to relational databases (PostgreSQL, MySQL), in alignment with industry best practices.
+This is my project submission for a front-end developer take home job assessment.
 
 ## Table of contents
 
@@ -20,11 +20,20 @@ To enhance my full-stack development skills, I am transitioning from using non-r
 
 ### The Challenge/User Stories
 
-- **For Users**:
-As a user, I want a simple and intuitive interface that allows me to perform basic actions such as creating, viewing, updating, and deleting records. I expect the system to provide real-time feedback when I add or update an entry, and I want to be able to remove records without hassle. The experience should be seamless, with changes immediately visible in the app.
+- **Login Page**:
+The Login page should allow users to input credentials and log in to access the dashboard. It should be pixel-perfect, matching the Figma design, with proper input validation and error handling. The page must be mobile-responsive, ensuring users can easily interact with the form on both desktop and mobile devices.  
 
-- **For Developers**:
-As a developer, this application demonstrates a full-stack setup using Next.js for both the frontend and API routes, combined with a MySQL database for the backend. The app implements CRUD functionality with a focus on clean and scalable code, ensuring data persistence and integrity. The backend is structured to handle database interactions efficiently, and the frontend delivers a user-friendly experience that reflects best practices for modern web development.
+- **Dashboard Page**:
+The Dashboard page displays an overview of key information after a user logs in. It must closely mirror the design from the Figma file and be responsive across all screen sizes, ensuring a consistent user experience on both desktop and mobile.  
+
+- **User List Page**:
+The User List page should fetch and display a paginated list of 500 users from a mock API. It must be mobile-responsive, with smooth scrolling and navigation. The design should be implemented with high fidelity to ensure consistency and ease of use.  
+
+- **User Details Page**:
+The User Details page displays individual user information, fetched from the mock API. It should utilize local storage or IndexedDB to store and retrieve user data efficiently. The page must be responsive, ensuring users can view details clearly on both desktop and mobile.  
+
+- **Additional Requirements**:
+Ensure the entire app is responsive and visually matches the provided Figma design. Write clean, well-structured code with proper variable and function naming conventions. Implement unit tests to cover both positive and negative scenarios, and document the project thoroughly in the README, including setup instructions and clear commit history.  
 
 ### Screenshot
 
@@ -32,8 +41,8 @@ As a developer, this application demonstrates a full-stack setup using Next.js f
 
 ### Links
 
-- Solution URL: [https://github.com/traez/nextjs-mysql-fullstack](https://github.com/traez/nextjs-mysql-fullstack)
-- Live Site URL: [https://nextjs-mysql-fullstack.vercel.app/](https://nextjs-mysql-fullstack.vercel.app/)
+- Solution URL: [https://github.com/traez/lendsqr-fe-test](https://github.com/traez/lendsqr-fe-test)
+- Live Site URL: [https://tochukwu-ezeokafor-lendsqr-fe-test.vercel.app/](https://tochukwu-ezeokafor-lendsqr-fe-test.vercel.app/)
 
 ## My process
 
@@ -45,27 +54,50 @@ As a developer, this application demonstrates a full-stack setup using Next.js f
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- Tailwind CSS
 - Typescript
 - Nodejs      
-- MySQL  
 - React Icons  
-- Sonner          
+- Tanstack       
+- SCSS (SASS)  
+- Jest  
+- React Testing Library      
 
 ### What I learned
    
-- **Transition from MongoDB (Non-relational) to MySQL (Relational)**  
-After using MongoDB, I revisited relational databases with MySQL, having last worked with Microsoft Access years ago. Both databases store data but differ significantly in structure. While MongoDB uses a flexible, document-based schema where fields can vary between records, MySQL requires a strict, table-based structure with clearly defined relationships between tables.   
-- **Amazon RDS Free Tier**  
-When using Amazon RDS (Relational Database Service), it's important to manage resources wisely. While it's possible to create multiple RDS instances under the Free Tier, their combined usage should not exceed 750 hours per month and 20 GB of storage. For my project, I created a single instance with the identifier `nextjs-mysql-fullstack`, which provided a host endpoint, username, and password for connecting to the database. The database name varies across projects to maintain isolation between them.    
-- **MySQL2 Dependency in Next.js**  
-I utilized the `mysql2` package as a MySQL client in my Next.js full-stack application. This dependency provides the tools needed to connect to the database, perform queries, and manage transactions, making it a critical part of the application’s database interaction layer.    
-- **HTML Input Type for Basic Validation**  
-By setting the `type="email"` attribute on an `<input>` element in my forms, I leveraged the browser’s built-in validation. This ensures that users enter a properly formatted email address without requiring additional JavaScript for basic validation.    
-- **Development vs Production: MySQL Workbench and Amazon RDS**  
-In development, I worked with MySQL Workbench as a local tool to visually manage databases and run queries. However, for production, I deployed the database on Amazon RDS, integrating it with Vercel for the Next.js application hosting. This setup allows for scalable production use, with the flexibility of RDS handling the database side.    
-- **API Testing in Production with Postman**  
-I've learned the importance of using API testing tools like Postman for testing API routes, even in production. These tools provide detailed feedback on your API’s behavior and responses, helping identify issues that might not be apparent through the user interface or logs alone.    
+- **Next.js and Turbopack**  
+I had my first experience using Turbopack for Next.js development. I worked with Next.js 15 and React 19.     
+- **Dependency Management**  
+I encountered some dependency issues due to using newer versions of React and Next.js. To overcome this, I had to use the `--legacy-peer-deps` flag during installation.   
+- **SCSS Introduction**  
+This was my first time using SCSS (Sass). I learned that Next.js natively supports Sass, so I could just swap out my Global.css file. I also realized that two key features of SCSS - nesting and variables - are now available in vanilla CSS, which makes me wonder if SCSS might become less necessary over time.  
+- **Sass Configuration**  
+I ran into a Sass deprecation warning in the console. I fixed it by adding the following to my `next.config.ts`:
+`const nextConfig: NextConfig = {
+  sassOptions: {
+    silenceDeprecations: ["legacy-js-api"],
+  }
+}  `
+- **Sass Modularity**  
+I learned about the `@use` and `@forward` rules in Sass, which help make styling more modular.   
+- **Layout Best Practices**  
+I discovered some important layout considerations:
+- Always ensure the parent container has a defined height when using flex-grow on its children.
+- Add `margin: 0; padding: 0; box-sizing: border-box;` to the universal selector (*) to reset default styles and prevent scrollbar issues.   
+- **Custom Font Integration**  
+I learned how to load and use local custom fonts in Next.js.   
+- **TypeScript and React Styling**  
+I used `CSSProperties` from React for the first time, which helped me with type-checking inline styles in TypeScript.   
+- **CSS Methodology**  
+I implemented the BEM (Block Element Modifier) methodology for CSS class naming. It really helped improve the structure and maintainability of my styles.   
+- **Mock API Usage**  
+I used [https://mockaron.com/](https://mockaron.com/) to generate fake API data for my project.   
+- **Number Formatting**  
+I learned how to format numbers using `Intl.NumberFormat`. For example, I used it to format user balances like this:
+`new Intl.NumberFormat("en-US").format(userInfo) `  
+- **Unit Testing Insights**  
+I realized I need more practice with unit testing, especially in applying both positive and negative scenario testing.   
+- **Responsive Design Challenges**  
+I noticed that the mobile responsiveness for my `/dashboard` route needs improvement. The layout sectors need to be recalculated for mobile view, rather than using the same `fr` units as in the desktop view.   
 
 ### Continued development
 
@@ -80,7 +112,7 @@ ChatGPT
 
 ## Author
 
-- Website - [Trae Zeeofor](https://github.com/traez)
+- Website - [Zeeofor Technologies](https://zeeofortech.vercel.app/)
 - Twitter - [@trae_z](https://twitter.com/trae_z)
 
 ## Acknowledgments
