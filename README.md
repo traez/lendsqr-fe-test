@@ -80,9 +80,9 @@ I ran into a Sass deprecation warning in the console. I fixed it by adding the f
 - **Sass Modularity**  
 I learned about the `@use` and `@forward` rules in Sass, which help make styling more modular.   
 - **Layout Best Practices**  
-I discovered some important layout considerations:
-- Always ensure the parent container has a defined height when using flex-grow on its children.
-- Add `margin: 0; padding: 0; box-sizing: border-box;` to the universal selector (*) to reset default styles and prevent scrollbar issues.   
+I discovered some important layout considerations:  
+1) Always ensure the parent container has a defined height when using flex-grow on its children.  
+2) Add `margin: 0; padding: 0; box-sizing: border-box;` to the universal selector (*) to reset default styles and prevent scrollbar issues.     
 - **Custom Font Integration**  
 I learned how to load and use local custom fonts in Next.js.   
 - **TypeScript and React Styling**  
