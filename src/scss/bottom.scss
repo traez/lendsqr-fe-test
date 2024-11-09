@@ -1,3 +1,31 @@
-.bottom{
-    grid-area: bottom;
+.bottom {
+  grid-area: bottom;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #1a202c;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    gap: 2rem;
+    font-size: 0.875rem;
+  }
+
+  &__link {
+    font-weight: bold;
+    color: #2b6cb0;
+    text-decoration: none;
+    &:hover {
+      color: #48bb78;
+      text-decoration: underline;
+    }
+  }
+
+  &__copyright {
+    color: #2b6cb0;
+  }
 }

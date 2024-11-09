@@ -202,7 +202,7 @@ export default function Card() {
 
   const data = userData ?? []
 
-  //console.log(userData);
+/*   console.log(userData?.length); */
 
   const table = useReactTable({
     data,

@@ -6,7 +6,7 @@ export const StateContext = createContext<StateContextType | undefined>(
   undefined
 );
 
-interface StateContextType {
+export interface StateContextType {
   isModalOpen: boolean;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   toggleModalState: () => void;
