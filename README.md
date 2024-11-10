@@ -96,8 +96,6 @@ I learned how to format numbers using `Intl.NumberFormat`. For example, I used i
 `new Intl.NumberFormat("en-US").format(userInfo) `  
 - **Unit Testing Insights**  
 I realized I need more practice with unit testing, especially in applying both positive and negative scenario testing.   
-- **Responsive Design Challenges**  
-I noticed that the mobile responsiveness for my `/dashboard` route needs improvement. The layout sectors need to be recalculated for mobile view, rather than using the same `fr` units as in the desktop view.   
 - **Screen Recording and Explanation**  
 I used Loom – Screen Recorder & Screen Capture, an alternative to "Awesome Screen Recorder & Screenshot", to record a screen capture of my app, source code, and to explain the build process.    
 
