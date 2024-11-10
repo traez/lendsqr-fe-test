@@ -1,11 +1,43 @@
 .details {
   grid-area: details;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template:
-    "detailsaaa" 11fr
-    "detailsbbb" 15fr
-    "detailsccc" 64fr
-    "detailsddd" 10fr / 1fr;
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    "detailsaaa" 10fr
+    "detailsbbb" 14fr
+    "detailsccc" 72fr
+    "detailsddd" 4fr / 1fr;
+
+  @media (min-width: 500px) {
+    grid-template:
+      "detailsaaa" 9fr
+      "detailsbbb" 12fr
+      "detailsccc" 76fr
+      "detailsddd" 3fr / 1fr;
+  }
+
+  @media (min-width: 575px) {
+    grid-template:
+      "detailsaaa" 10fr
+      "detailsbbb" 13fr
+      "detailsccc" 72fr
+      "detailsddd" 5fr / 1fr;
+  }
+
+  @media (min-width: 751px) {
+    grid-template:
+      "detailsaaa" 11fr
+      "detailsbbb" 15fr
+      "detailsccc" 70fr
+      "detailsddd" 4fr / 1fr;
+  }
+
+  @media (min-width: 1034px) {
+    grid-template:
+      "detailsaaa" 12fr
+      "detailsbbb" 16fr
+      "detailsccc" 67fr
+      "detailsddd" 5fr / 1fr;
+  }
 }

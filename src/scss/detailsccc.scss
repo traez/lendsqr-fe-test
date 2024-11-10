@@ -11,28 +11,42 @@
   }
 
   article {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 1.5rem;
+    gap: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 500px) {
+      padding: 1.5rem 0;
+      gap: 1.5rem;
+    }
 
     nav {
       color: #213f7d;
       font-size: 16px;
       font-weight: 500;
-      padding-left: 20px;
+      padding-left: 10px;
+
+      @media (min-width: 500px) {
+        padding-left: 20px;
+      }
     }
 
     aside {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.5rem;
       width: 100%;
       justify-items: center;
+
+      @media (min-width: 500px) {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
 
       menu {
         width: 150px;
@@ -40,16 +54,24 @@
 
         p {
           color: #545f7d;
-          font-size: 12px;
+          font-size: 10px;
           margin-bottom: 5px;
+
+          @media (min-width: 500px) {
+            font-size: 12px;
+          }
         }
 
         b {
           color: #545f7d;
-          font-size: 16px;
+          font-size: 12px;
           white-space: normal;
           word-wrap: break-word;
           overflow-wrap: break-word;
+
+          @media (min-width: 500px) {
+            font-size: 16px;
+          }
         }
       }
     }

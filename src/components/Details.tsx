@@ -21,7 +21,7 @@ const Details = () => {
         <DetailsAAA />
         <DetailsBBB userInfo={userInfo} />
         <DetailsCCC userInfo={userInfo} />
-        <article className="detailsddd">.</article>
+        <section className="detailsddd">.</section>
       </section>
     </>
   );

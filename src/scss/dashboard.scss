@@ -3,16 +3,23 @@
   width: 100%;
   display: grid;
   grid-template:
-    "top" 11fr
-    "box" 18fr
-    "card" 50fr
-    "bottom" 21fr / 1fr;
+    "top" 7fr
+    "box" 30fr
+    "card" 60fr
+    "bottom" 3fr / 1fr;
 
   @media (min-width: 1024px) {
     grid-template:
+      "navbar top" 7fr
+      "navbar box" 30fr
+      "navbar card" 60fr
+      "navbar bottom" 3fr / 1fr 4fr;
+  }
+  @media (min-width: 1060px) {
+    grid-template:
       "navbar top" 11fr
       "navbar box" 18fr
-      "navbar card" 50fr
-      "navbar bottom" 21fr / 1fr 4fr;
+      "navbar card" 67fr
+      "navbar bottom" 4fr / 1fr 4fr;
   }
 }
